@@ -1,6 +1,6 @@
 .container {
   padding: 0 2rem;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   min-height: 100vh;
   position: relative;
 }
@@ -31,6 +31,8 @@
   flex-wrap: wrap;
   gap: 2em;
   align-items: center;
+  /* box-shadow: 10px 10px 10px 20px rgba(0, 0, 0, 0.2),
+    10px 10px 10px 20px rgba(0, 0, 0, 0.2); */
 }
 .main {
   min-height: 100vh;

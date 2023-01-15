@@ -4,8 +4,13 @@ import styles from "../styles/Home.module.css";
 import CoinData from "../components/coinData";
 import Swap from "../components/Swap";
 import ManualHeader from "../components/ManualHeader";
+import { useState } from "react";
 
 export default function Home() {
+  const [apiData, setApiData] = useState();
+  const getData = (apiData) => {
+    setApiData(apiData);
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -15,8 +20,8 @@ export default function Home() {
       </Head>
       <ManualHeader />
       <div className={styles.coinAndSwap}>
-        <CoinData />
-        <Swap />
+        <CoinData onAddApiData={getData} />
+        <Swap data={apiData} />
       </div>
     </div>
   );
