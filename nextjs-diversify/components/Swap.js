@@ -33,13 +33,16 @@ const Swap = (props) => {
     <div className={classes.swap}>
       <h1>Highest Rise</h1>
       <div className={classes.inputAndBtn}>
-        <input
-          type="text"
-          disabled
-          value={`${max[0].name} ${
-            max[0].market_data.price_change_percentage_24h > 0 ? "up" : "down"
-          } by ${max[0].market_data.price_change_percentage_24h.toFixed(2)} %`}
-        ></input>
+        {max != [] &&
+          max.map((max) => (
+            <input
+              type="text"
+              disabled
+              value={`${max.name} ${
+                max.market_data.price_change_percentage_24h > 0 ? "up" : "down"
+              } by ${max.market_data.price_change_percentage_24h.toFixed(2)} %`}
+            ></input>
+          ))}
 
         <form onSubmit={formSubmitHandler} className={classes.form}>
           <div className={classes.inputFields}>

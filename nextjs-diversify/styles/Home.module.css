@@ -3,6 +3,8 @@
   background-color: rgba(0, 0, 0, 0.5);
   min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .container::after {
   content: "";

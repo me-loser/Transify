@@ -5,6 +5,7 @@ import CoinData from "../components/coinData";
 import Swap from "../components/Swap";
 import ManualHeader from "../components/ManualHeader";
 import { useState } from "react";
+import Footer from "../components/footer";
 
 export default function Home() {
   const [apiData, setApiData] = useState();
@@ -23,6 +24,7 @@ export default function Home() {
         <CoinData onAddApiData={getData} />
         <Swap data={apiData} />
       </div>
+      <Footer />
     </div>
   );
 }
